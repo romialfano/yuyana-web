@@ -17,6 +17,7 @@ body {
     --negro: #130F14;
     --gris: #5E585D;
     --radio-art: 5px;
+    --padd-sections: 40px 10px;
 }
 
 /* Estilos generales */
@@ -34,21 +35,58 @@ header {
     justify-content: space-between;
 }
 
-header ul {
-    display: flex;
-    gap: 10px;
+.logo {
+    height: 55px;
 }
 
-header > a > img {
-    height: 55px;
-    margin-right: 10px;
-}
 .navbutton {
     height: 55px;
     border-radius: 50px;
 }
 
-/* Main*/
+/*---------------------------
+#container{
+    margin:auto;
+    padding:3em 0 0;
+    text-align:center;
+}
+#searchform{
+    display:inline;
+    font-size:1em;
+    border-radius: 8em;
+    border:0.1em solid rgba(218,208,190,1);
+    box-shadow:0 0 0.3em rgba(60,60,60,0.4);
+    padding:0.3em;
+    background:white;
+}
+#s{
+    transition:all 0.2s ease-out;
+    width:1px;
+    border-radius:0;
+    box-shadow:none;
+    outline: none;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: transparent;
+    opacity:0;
+}
+#s:focus{
+    width:8em;
+    opacity:1;
+}
+label{
+    padding-left: 1px;
+    display:inline-block;
+    margin-top:0.3em;
+    color:rgba(218,208,190,1);
+    text-shadow:0 0 0.1em rgba(60,60,60,0.3);
+    position: relative;
+    left:0.1em;
+}
+----------------------------------------------*/
+
+/*Main*/
 h1 {
     width: 100%;
     margin: 40px 0;
@@ -88,21 +126,37 @@ h2 {
 h3, h4 {
     font-size: 14px;
     margin: 0;
-    color: var(--gris);
+    color: var(--violeta-200);
+    /*text-align: center;*/
+    font-weight: 500;
 }
 
 h4 {
     font-size: 16px;
+    color: var(--gris);
+    font-weight: 700
 }
 
 /*Sección Novedades y Ofertas (Carruseles)*/
 ul {
     list-style: none;
-    display: flex
+    display: flex;
+    gap: 20px;
+    padding: var(--padd-sections);
+    margin: 0;
+}
+
+.carrusel {
+    flex-wrap: wrap;
+}
+
+.art-link {
+    text-decoration: none;
 }
 
 .articles {
-    height: 285px; 
+    height: 285px;
+    width: 140px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -118,13 +172,14 @@ ul {
     display: flex;
     flex-direction: column;
     list-style: none; /*reemplazar por marker + número*/
-    padding: 20px 0;
+    padding: var(--padd-sections);
+    margin: 0;
+    gap: 20px;
 }
 
 .item-ranking {
     width: 340px;
     height: 150px;
-    margin: 10px 20px;
     border-radius: 5px;
     display: flex;
     background-color: var(--violeta-300-principal);
@@ -139,7 +194,8 @@ ul {
 }
 
 .item-ranking img {
-    height: 140;
+    height: 150px;
+    width: 100px;
     border-radius: 5px 0 0 5px;
 }
 
@@ -158,6 +214,7 @@ ul {
     margin: 0;
     color: var(--blanco);
     font-size: 20px;
+    font-weight: 700;
 }
 
 .art-prices {
@@ -176,7 +233,7 @@ ul {
 }
 
 /*Menú de botones*/
-#menu-botones {
+.footer-nav {
     background-color: #CDCFFF;
     height: 70px;
     width: 100%;
@@ -189,9 +246,10 @@ ul {
     justify-content: space-around;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 
-.menu-buttons img {
+.ftrbutton {
     width: 36px;
     height: 36px;
 }
@@ -200,10 +258,54 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #8C43C7;
+    color: var(--violeta-200);
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
+}
+
+/*Newsletter*/
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.newsletter span {
+    width: 340px;
+    font-weight: 600;
+    letter-spacing: -1.356px; /* -8% */
+    text-align: center;
+    color: var(--gris);
+}
+.mail-input {
+    width: 340px;
+    display: flex;
+}
+
+.mail-input input {
+    font-size: 16px;
+    width: 220px;
+    height: 40px;
+    border: 2px solid var(--rojo);
+    border-radius: 10px 0 0 10px;
+    text-indent: 5px;
+}
+
+.mail-input button {
+    width: 120px;
+    font-weight: 600;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: 2px solid var(--rojo);
+    border-radius: 0 10px 10px 0;
+}
+
+.mail-input button:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /*Footer*/
@@ -255,4 +357,60 @@ ul {
 }
 .links a {
     color: var(--blanco);
+}
+
+/*----------------------------------------------------------*/
+
+.barra-titulo {
+    background-color: var(--violeta-100);
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid var(--violeta-200);
+}
+
+.barra-titulo h4 {
+    width: 318px;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--violeta-400);
+    text-align: center;
+}
+
+.barra-titulo img {
+    width: 32px;
+}
+
+.ver-libro {
+    padding: 20px;
+}
+
+.ver-libro img {
+    width: 250px;
+    height: 380px;
+    border-radius: 5px;
+}
+
+.img-y-btns {
+    display: flex;
+}
+
+.action-btns {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    height: 380px;
+    justify-content: center;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.action img {
+    height: 46px;
+    width: 46px;
 }
