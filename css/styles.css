@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
 @import url('images/interface');
 
+* {
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+}
 /* VARIABLES */
 body {
     --violeta-400: #2E0652;
@@ -9,23 +13,20 @@ body {
     --violeta-100: #CDCFFF;
     --rojo: #AF2606;
     --acento: #FB7C55;
-    --blanco: #F9F2FF;
+    --blanco: #FBF7FF;
     --negro: #130F14;
     --gris: #5E585D;
-    --tipografia: 'Maven Pro', sans-serif;
     --radio-art: 5px;
 }
 
 /* Estilos generales */
 body {
-    font-family: var(--tipografia);
     margin: 0;
     background-color: var(--blanco);
 }
 
 /* Header y Nav */
 header {
-    box-sizing: border-box;
     width: 100%;
     background-color: var(--violeta-300-principal);
     padding: 10px;
@@ -50,14 +51,14 @@ header > a > img {
 /* Main*/
 h1 {
     width: 100%;
-    margin: 20px auto;
+    margin: 40px 0;
+    text-align: center;
     font-weight: 600;
     font-size: 24px;
     color: var(--violeta-300-principal);
 }
 
 h2 {
-    margin: 40px 0;
     height: 40px;
     width: 195.5px;
     background-color: var(--violeta-400);
@@ -65,10 +66,14 @@ h2 {
     color: var(--blanco);
     font-weight: 500;
     text-align: center;
+    line-height: 40px;
+    margin: 0;
 }
+
 .novedades_titulo{
     position: relative;
 }
+
 .novedades_titulo::after{
     content: '';
     background: var(--violeta-400);
@@ -80,21 +85,27 @@ h2 {
     transform: rotate(45deg);
 }
 
+h3, h4 {
+    font-size: 14px;
+    margin: 0;
+    color: var(--gris);
+}
+
+h4 {
+    font-size: 16px;
+}
+
 /*Sección Novedades y Ofertas (Carruseles)*/
 ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    display: flex
 }
 
 .articles {
-    width: 140px;
-    height: 350px;
-    margin: 10px;
+    height: 285px; 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .articles img {
@@ -107,13 +118,13 @@ ul {
     display: flex;
     flex-direction: column;
     list-style: none; /*reemplazar por marker + número*/
-    padding: 0;
+    padding: 20px 0;
 }
 
 .item-ranking {
     width: 340px;
     height: 150px;
-    margin: 10px;
+    margin: 10px 20px;
     border-radius: 5px;
     display: flex;
     background-color: var(--violeta-300-principal);
@@ -164,30 +175,84 @@ ul {
     justify-content: flex-start;
 }
 
+/*Menú de botones*/
+#menu-botones {
+    background-color: #CDCFFF;
+    height: 70px;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+}
+.menu-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+.menu-buttons img {
+    width: 36px;
+    height: 36px;
+}
+
+.menu-buttons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8C43C7;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 /*Footer*/
-footer {
+.footer-info {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    padding: 0 auto;
+    padding: 15px;
     height: 150px;
     background-color: var(--violeta-400);
     color: var(--acento);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 70px;
 }
 
-footer span{
-    width: fit-content;
-    margin: 0 auto;
+.rrss {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
-footer img {
+.rrss img {
     width: 30px;
-    margin: 15px;
 }
-footer a {
+
+.footer-info div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.footer-info span{
+    color: var(--blanco);
+}
+
+.footer-info a {
     color: var(--acento);
     text-decoration: none;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+.links a {
+    color: var(--blanco);
 }

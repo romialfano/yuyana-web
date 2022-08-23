@@ -10,13 +10,10 @@
 <body>
     <header>
         <a href="index.html" title="Página principal"><img src="images/interface/logo.png" alt="Yuyana Mundo De Lectores"></a>
-        <ul>
-            <li><a href="###" title="Buscador"><img class="navbutton" src="images/interface/search.png" alt=""></a></li>
-            <li><a href="###" title="Carrito de compras"><img class="navbutton" src="images/interface/cart.png" alt=""></a></li>
-        </ul>
+        <a href="###" title="Buscador"><img class="navbutton" src="images/interface/search.png" alt=""></a>
     </header>
 
-    <main>
+    <main id="ARRIBA">
         <h1>¡Bienvenidos a Yuyana!</h1>
         <section class="carrusel">
             <h2 class="novedades_titulo">Novedades</h2>
@@ -45,7 +42,7 @@
             </ul>
         </section>
         <section>
-            <h2>Más valorados</h2>
+            <h2 class="novedades_titulo">Más valorados</h2>
             <ol class="list-ranking">
                 <li>
                     <article class="item-ranking">
@@ -83,7 +80,7 @@
             </ol>
         </section>
         <section class="carrusel">
-            <h2>Ofertas</h2>
+            <h2 class="novedades_titulo">Ofertas</h2>
             <ul>
                 <li>
                     <article class="articles">
@@ -95,9 +92,17 @@
             </ul>
         </section>
     </main>
-
-    <footer>
-        <ul>
+    <footer id="menu-botones">
+        <ul class="menu-buttons">
+            <li><a href="###" title="Página principal"><img class="ftrbutton" src="images/interface/menu-btns/home-1.png" alt="">Inicio</a></li>
+            <li><a href="###" title="Carrito de compras"><img class="ftrbutton" src="images/interface/menu-btns/cart-1.png" alt="">Carrito</a></li>
+            <li><a href="###" title="Mi cuenta"><img class="ftrbutton" src="images/interface/menu-btns/account-1.png" alt="">Cuenta</a></li>
+            <li><a href="###" title="CLUB YUYANA"><img class="ftrbutton" src="images/interface/menu-btns/club-1.png" alt="">CLUB</a></li>
+            <li><a href="###" title="Menú"><img class="ftrbutton" src="images/interface/menu-btns/menu-1.png" alt="">Menú</a></li>
+        </ul>
+    </footer>
+    <footer class="footer-info">
+        <ul class="rrss">
             <li>
                 <a href="https://www.whatsapp.com" title="Chateá con Yuyana por WhatsApp" target="_blank"><img src="images/interface/wsp.png" alt=""></a>
             </li>
@@ -108,8 +113,15 @@
                 <a href="https://www.facebook.com" title="Ir al Facebook de Yuyana" target="_blank"><img src="images/interface/face.png" alt=""></a>
             </li>
         </ul>
-        <span>Atención al cliente:</span>
-        <a href="mailto:contacto@yuyana.com">contacto@yuyana.com</a>
+
+        <div><span>Atención al cliente:</span>
+        <a href="mailto:contacto@yuyana.com">contacto@yuyana.com</a></div>
+
+        <ul class="links">
+            <li><a href="###" title="AYUDA">AYUDA</a></li>
+            <li><a href="###" title="CONTACTO">CONTACTO</a></li>
+            <li><a href="#ARRIBA" title="VOLVER ARRIBA">VOLVER ARRIBA</a></li>
+        </ul>
     </footer>
 </body>
 </html>
