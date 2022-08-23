@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+@import url('images/interface');
+
+/* VARIABLES */
+body {
+    --violeta-400: #2E0652;
+    --violeta-300-principal: #551481;
+    --violeta-200: #8C43C7;
+    --violeta-100: #CDCFFF;
+    --rojo: #AF2606;
+    --acento: #FB7C55;
+    --blanco: #F9F2FF;
+    --negro: #130F14;
+    --gris: #5E585D;
+    --tipografia: 'Maven Pro', sans-serif;
+    --radio-art: 5px;
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--tipografia);
+    margin: 0;
+    background-color: var(--blanco);
+}
+
+/* Header y Nav */
+header {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--violeta-300-principal);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+    gap: 10px;
+}
+
+header > a > img {
+    height: 55px;
+    margin-right: 10px;
+}
+.navbutton {
+    height: 55px;
+    border-radius: 50px;
+}
+
+/* Main*/
+h1 {
+    width: 100%;
+    margin: 20px auto;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--violeta-300-principal);
+}
+
+h2 {
+    margin: 40px 0;
+    height: 40px;
+    width: 195.5px;
+    background-color: var(--violeta-400);
+    font-size: 24px;
+    color: var(--blanco);
+    font-weight: 500;
+    text-align: center;
+}
+.novedades_titulo{
+    position: relative;
+}
+.novedades_titulo::after{
+    content: '';
+    background: var(--violeta-400);
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    top: 6px;
+    left: 182px;
+    transform: rotate(45deg);
+}
+
+/*Sección Novedades y Ofertas (Carruseles)*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.articles {
+    width: 140px;
+    height: 350px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.articles img {
+    height: 215px;
+    border-radius: 5px;
+}
+
+/*Sección Más valorados (Ranking)*/
+.list-ranking {
+    display: flex;
+    flex-direction: column;
+    list-style: none; /*reemplazar por marker + número*/
+    padding: 0;
+}
+
+.item-ranking {
+    width: 340px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    background-color: var(--violeta-300-principal);
+}
+
+.item-ranking > div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item-ranking img {
+    height: 140;
+    border-radius: 5px 0 0 5px;
+}
+
+.item-ranking div img {
+    height: 20px;
+    width: 117px;
+}
+
+.item-ranking h3 {
+    margin: 0;
+    color: var(--violeta-100);
+    font-size: 16px;
+}
+
+.item-ranking h4 {
+    margin: 0;
+    color: var(--blanco);
+    font-size: 20px;
+}
+
+.art-prices {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    color: var(--violeta-100);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ranking div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 auto;
+    height: 150px;
+    background-color: var(--violeta-400);
+    color: var(--acento);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+footer span{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+footer img {
+    width: 30px;
+    margin: 15px;
+}
+footer a {
+    color: var(--acento);
+    text-decoration: none;
+}
